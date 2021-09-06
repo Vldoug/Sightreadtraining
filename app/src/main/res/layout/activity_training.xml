@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Training">
+
+    <Button
+        android:id="@+id/d"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkAnswer"
+        android:text="D"
+        app:layout_constraintBaseline_toBaselineOf="@+id/c"
+        app:layout_constraintEnd_toStartOf="@+id/e"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/c" />
+
+    <Button
+        android:id="@+id/c"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:onClick="checkAnswer"
+        android:text="C"
+        app:layout_constraintBottom_toTopOf="@+id/g"
+        app:layout_constraintEnd_toStartOf="@+id/d"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/g"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="checkAnswer"
+        android:text="G"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/a"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/e"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkAnswer"
+        android:text="E"
+        app:layout_constraintBaseline_toBaselineOf="@+id/d"
+        app:layout_constraintEnd_toStartOf="@+id/f"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/d" />
+
+    <Button
+        android:id="@+id/f"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkAnswer"
+        android:text="F"
+        app:layout_constraintBaseline_toBaselineOf="@+id/e"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/e" />
+
+    <Button
+        android:id="@+id/a"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkAnswer"
+        android:text="A"
+        app:layout_constraintBaseline_toBaselineOf="@+id/g"
+        app:layout_constraintEnd_toStartOf="@+id/b"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/g" />
+
+    <Button
+        android:id="@+id/b"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="checkAnswer"
+        android:text="B"
+        app:layout_constraintBaseline_toBaselineOf="@+id/a"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/a" />
+
+    <ImageView
+        android:id="@+id/imageView9"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@+id/c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_backdrop" />
+
+    <ImageView
+        android:id="@+id/trebleClef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bar"
+        app:layout_constraintStart_toStartOf="@+id/bar"
+        app:layout_constraintTop_toTopOf="@+id/bar"
+        app:layout_constraintVertical_bias="0.45"
+        app:srcCompat="@drawable/music_gclef" />
+
+    <ImageView
+        android:id="@+id/bar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        app:layout_constraintBottom_toTopOf="@+id/c"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/music_bar" />
+
+    <ImageView
+        android:id="@+id/bassClef"
+        android:layout_width="58dp"
+        android:layout_height="228dp"
+        android:scaleX="1.2"
+        android:scaleY="1.2"
+        app:layout_constraintBottom_toBottomOf="@+id/bar"
+        app:layout_constraintStart_toStartOf="@+id/trebleClef"
+        app:layout_constraintTop_toTopOf="@+id/bar"
+        app:layout_constraintVertical_bias="0.57"
+        app:srcCompat="@drawable/music_fclef" />
+
+    <ImageView
+        android:id="@+id/note"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="128dp"
+        app:layout_constraintBottom_toBottomOf="@+id/bar"
+        app:layout_constraintStart_toStartOf="@+id/bar"
+        app:layout_constraintTop_toTopOf="@+id/bar"
+        app:layout_constraintVertical_bias="0.61"
+        app:srcCompat="@drawable/note0" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
