@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import com.google.android.material.chip.Chip
 
 
@@ -23,6 +24,11 @@ class MainActivity : AppCompatActivity() {
 
     //starts the training activity
     fun startTraining(view: View){
+        if(!(faBool || solBool)){
+            val toast = Toast.makeText(this.applicationContext, "Please select at least one clef", Toast.LENGTH_SHORT)
+            toast.show()
+            return
+        }
         val intent = Intent(this, Training::class.java).apply {
             putExtra("FA", faBool)
             putExtra("SOL", solBool)
