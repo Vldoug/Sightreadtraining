@@ -21,7 +21,7 @@
         android:id="@+id/c"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="16dp"
+        android:layout_marginBottom="44dp"
         android:onClick="checkAnswer"
         android:text="C"
         app:layout_constraintBottom_toTopOf="@+id/g"

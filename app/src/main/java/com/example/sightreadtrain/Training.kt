@@ -32,6 +32,7 @@ class Training : AppCompatActivity() {
     private fun showClef(bool: Boolean){
         findViewById<ImageView>(R.id.trebleClef).visibility = clefVisibility(bool)
         findViewById<ImageView>(R.id.bassClef).visibility = clefVisibility(!bool)
+        currentClef = bool
     }
 
 
@@ -46,10 +47,8 @@ class Training : AppCompatActivity() {
             if(nextVal > 28){
                 nextVal -= 29
                 showClef(false)
-                currentClef = false
             } else {
                 showClef(true)
-                currentClef = true
             }
         }
         note.setImageResource(resources.getIdentifier("note$nextVal", "drawable", this.packageName))
